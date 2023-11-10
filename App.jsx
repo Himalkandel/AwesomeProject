@@ -4,19 +4,26 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react'; // Import useState
 import {
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  StatusBar // Import StatusBar
 } from 'react-native';
-import ToDoList from './ToDoList'; 
-import ToDoForm from './ToDoForm'; 
+import ToDoList from './ToDoList';
+import ToDoForm from './ToDoForm';
 
 function App() {
+  const [tasks, setTasks] = useState([ //variables
+    'Do laundry',
+    'Go to gym',
+    'Walk dog'
+  ]);
+
   return (
     <SafeAreaView style={styles.container}>
-      <ToDoList /> {/* Use ToDoList component */}
-      <ToDoForm /> {/* Use ToDoForm component */}
+      <ToDoList tasks={tasks} /> {/* Pass tasks to ToDoList */}
+      <ToDoForm /> {/* ToDoForm component remains the same */}
     </SafeAreaView>
   );
 }
