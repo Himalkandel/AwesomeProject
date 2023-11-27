@@ -1,10 +1,12 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import AppContent from './App.jsx'; // Import the App content from App.jsx
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <AppContent /> {/* Render the main App content */}
       <StatusBar style="auto" />
     </View>
   );
